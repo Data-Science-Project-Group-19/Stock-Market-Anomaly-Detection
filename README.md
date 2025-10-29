@@ -1,3 +1,4 @@
+
 # Stock Market Anomaly Detection System
 
 ## 📒 Statistical Analysis of Indian Stocks
@@ -20,7 +21,7 @@ This project implements an automated anomaly detection system that identifies un
 
 ---
 
-## 📊 Key Findings
+## 🗒️ Key Findings
 
 ### Anomaly Detection Performance:
 - Banking stocks showed highest anomaly frequencies (ICICI Bank: 56, SBI: 61)
@@ -85,4 +86,68 @@ install.packages(c("shiny", "shinydashboard", "plotly", "dplyr", "readr",
 
 # Run the application
 shiny::runApp("Complete_project_DS_lab_1.R")
+```
 
+Live Application:
+
+Access the deployed application: https://mth208-project.shinyapps.io/proj/
+
+---
+
+📈 Project Structure
+
+```
+├── Complete_project_DS_lab_1.R     # Main Shiny application
+├── data/
+│   └── processed_stock_data.rds    # Pre-processed stock data
+├── docs/
+│   └── Ds_lab_1_report__final_.pdf # Comprehensive project report
+└── README.md
+```
+
+---
+
+🔬 Research Questions Addressed
+
+1. How can statistical methods systematically identify abnormal price movements and volume spikes?
+2. What are key statistical properties of historical returns for major NSE stocks?
+3. How can an interactive R Shiny dashboard implement real-time anomaly detection?
+4. What correlation structures exist between major Indian stocks?
+5. How effective are ARIMA models in providing short-term forecasts?
+6. How do anomaly patterns vary across different market sectors?
+
+---
+
+👥 Contributors
+
+Group 19 - IIT Kanpur
+
+· Manish Kumar Meena
+· Vritika 
+· Chandramohan Kushwah 
+· Sumit Sana 
+
+Course: MTH208 - Data Science Lab 1
+Institution: Indian Institute of Technology Kanpur
+Supervisor: Dr. Akash Anand 
+
+---
+
+🔗 Links
+
+· Live Application: ShinyApps.io
+
+---
+
+📚 References
+
+1. Yahoo Finance API Documentation
+2. R tidyquant Package Documentation
+3. Shiny R Studio Documentation
+4. Tsay, R. S. (2005). Analysis of Financial Time Series
+5. Hyndman, R. J., & Athanasopoulos, G. (2018). Forecasting: Principles and Practice
+
+---
+
+
+© 2025 IIT Kanpur - Department of Mathematics & Statistics | MTH208 Data Science Lab 1
