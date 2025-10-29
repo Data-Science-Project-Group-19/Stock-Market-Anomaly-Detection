@@ -37,7 +37,7 @@ This project implements an automated anomaly detection system that identifies un
 
 ---
 
-## 🛠️ Technical Implementation
+## 💻 Technical Implementation
 
 ### Methodology:
 - **Z-Score Analysis**: Identifies abnormal returns beyond ±3 standard deviations using 20-day rolling windows
