@@ -131,11 +131,6 @@ Course: MTH208 - Data Science Lab 1
 Institution: Indian Institute of Technology Kanpur
 Supervisor: Dr. Akash Anand 
 
----
-
-🔗 Links
-
-· Live Application: ShinyApps.io
 
 ---
 
