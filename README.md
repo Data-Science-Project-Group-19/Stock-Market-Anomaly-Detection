@@ -12,7 +12,7 @@ It integrates **Z-score analysis**, **volume spike detection**, **correlation an
 The system identifies unusual market behavior (price or volume deviations) and provides users with real-time visualization tools for exploratory analysis and forecasting.
 
 ---
-##▶️ App Design and Interactivity
+## ▶️ App Design and Interactivity
 
 The project is implemented as an interactive R Shiny dashboard that allows real-time analysis and visualization.
 Users can select different stocks, change the date range, and view statistical outputs dynamically.
