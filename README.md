@@ -1,7 +1,8 @@
-# 📊 Stock Market Anomaly Detection System  
+## 📊 Stock Market Anomaly Detection System  
+
 **Course:** MTH208 – Data Science Lab I  
 **Institute:** Indian Institute of Technology Kanpur  
-**Group 19**
+**Group : 19**
 
 ---
 
@@ -12,6 +13,24 @@ It integrates **Z-score analysis**, **volume spike detection**, **correlation an
 The system identifies unusual market behavior (price or volume deviations) and provides users with real-time visualization tools for exploratory analysis and forecasting.
 
 ---
+## ▶️ App Design and Interactivity
+
+The project is implemented as an interactive R Shiny dashboard that allows real-time analysis and visualization.
+Users can select different stocks, change the date range, and view statistical outputs dynamically.
+The interface has multiple tabs:
+
+-Dashboard: shows stock prices, volume, and detected anomalies with interactive charts.
+
+-Statistical Tests: performs tests like ADF, KPSS, and Shapiro–Wilk to check normality and stationarity.
+
+-Correlation Analysis: displays correlation heatmaps and scatter plots to study stock relationships.
+
+-Forecasting: provides ARIMA-based short-term price forecasts with confidence intervals.
+
+-About: gives details about project goals, data, and methods.
+
+The app combines preprocessing, analytics, and visualization in one integrated environment, making it easy to explore data and reproduce results.
+
 
 ## 📂 Features
 - Real-time **anomaly detection** using Z-score and rolling volatility.  
@@ -70,10 +89,10 @@ All data used is publicly available and collected under ethical research practic
 ## 📁 Repository Contents
 | File / Folder | Description |
 |----------------|-------------|
+| `preprocess.R`|preprocess anomaly test and merge them in a rds file|
 | `app.R` | Main Shiny app file (includes preprocessing + UI + server logic) |
-| `www/` | Contains all images, charts, and static assets used in the app |
-| `data/` | Stores preprocessed or cached data (optional) |
-| `Ds_lab_1_report_final.pdf` | Final written project report |
+| `data/` | Stores preprocessed or cached data |
+| `Project Report Group 19` | Final written project report |
 | `README.md` | Documentation and execution instructions |
 
 ---
@@ -98,3 +117,6 @@ All data used is publicly available and collected under ethical research practic
 This project is developed solely for academic and educational use under the **IIT Kanpur Data Science Lab (MTH208)** course guidelines.
 
 ---
+
+
+
