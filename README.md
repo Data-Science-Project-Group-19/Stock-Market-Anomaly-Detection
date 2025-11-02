@@ -1,148 +1,95 @@
-
-# Stock Market Anomaly Detection System
-
-## 📒 Statistical Analysis of Indian Stocks
-
-A comprehensive R Shiny dashboard for detecting anomalies in Indian stock market data using statistical methods and machine learning approaches. Developed as part of the **MTH208 - Data Science Lab 1** course at **Indian Institute of Technology Kanpur**.
+##  Stock Market Anomaly Detection System  
+**Course:** MTH208 – Data Science Lab I  
+**Institute:** Indian Institute of Technology Kanpur  
+**Group 19**
 
 ---
 
-## 🎯 Project Overview
+## 🧠 Project Overview
+This project develops an automated system for detecting stock market anomalies in major NSE-listed companies using statistical and time-series methods.  
+It integrates **Z-score analysis**, **volume spike detection**, **correlation analysis**, and **ARIMA-based forecasting** within an interactive **R Shiny dashboard**.
 
-This project implements an automated anomaly detection system that identifies unusual market movements in real-time by analyzing historical stock data from 10 major Indian companies. The system provides investors with actionable insights through statistical validation, correlation analysis, and forecasting capabilities.
-
-### Key Features:
-- **Real-time Anomaly Detection**: Z-Score analysis for price anomalies and volume spike detection
-- **Interactive Dashboard**: R Shiny application with dynamic visualizations
-- **Statistical Validation**: Comprehensive testing (ADF, KPSS, Shapiro-Wilk, Jarque-Bera)
-- **Portfolio Analysis**: Correlation heatmaps and diversification insights
-- **Time Series Forecasting**: ARIMA models with confidence intervals
-- **Sector-wise Analysis**: Comparative analysis across different market sectors
+The system identifies unusual market behavior (price or volume deviations) and provides users with real-time visualization tools for exploratory analysis and forecasting.
 
 ---
 
-## 🗒️ Key Findings
-
-### Anomaly Detection Performance:
-- Banking stocks showed highest anomaly frequencies (ICICI Bank: 56, SBI: 61)
-- FMCG stocks demonstrated lowest anomaly rates (ITC: 19, HUL: 23)
-- Volume spikes frequently preceded significant price movements
-- Strong sector-based correlation clustering observed
-
-### Statistical Insights:
-- COVID-19 period exhibited 3-5× normal volatility levels
-- ARIMA models achieved 8-12% MAPE for 30-day forecasts
-- Banking sector offers limited diversification benefits
-- Defensive FMCG stocks provide valuable diversification during downturns
+## 📂 Features
+- Real-time **anomaly detection** using Z-score and rolling volatility.  
+- **Interactive dashboard** for stock selection, date filtering, and visualization.  
+- **Statistical tests** for normality, stationarity, and volatility clustering.  
+- **Correlation heatmaps** for portfolio diversification analysis.  
+- **ARIMA-based forecasting** with uncertainty intervals.  
+- Ethical data sourcing via the **Yahoo Finance API**.
 
 ---
 
-## 💻 Technical Implementation
+## ⚙️ How to Run Locally
 
-### Methodology:
-- **Z-Score Analysis**: Identifies abnormal returns beyond ±3 standard deviations using 20-day rolling windows
-- **Volume Spike Detection**: Flags unusual trading activity (Volume > 2.5× 20-day average)
-- **Volatility Monitoring**: 20-day rolling standard deviation of returns
-- **Statistical Tests**: Stationarity (ADF, KPSS), Normality (Shapiro-Wilk, Jarque-Bera), Autocorrelation (ACF)
-- **Time Series Forecasting**: Auto ARIMA with 95% confidence intervals
-
-### Technologies Used:
-- **R** with Shiny framework
-- **tidyquant** for financial data from Yahoo Finance API
-- **plotly** for interactive visualizations
-- **forecast** for time series analysis
-- **tseries** for statistical testing
-
----
-
-## 📁 Dataset
-
-**Source**: Yahoo Finance API via `tidyquant` package  
-**Period**: January 2018 - Present  
-**Coverage**: 10 major Indian companies across sectors:
-
-| Sector | Companies |
-|--------|-----------|
-| Energy | Reliance Industries |
-| IT | TCS, Infosys |
-| Banking | HDFC Bank, ICICI Bank, State Bank of India |
-| FMCG | Hindustan Unilever, ITC |
-| Telecom | Bharti Airtel |
-| Infrastructure | Larsen & Toubro |
-
----
-
-## 🚀 Quick Start
-
-### Prerequisites:
-- R (version 4.3+)
-- RStudio (recommended)
-
-### Installation:
-```r
-# Install required packages
-install.packages(c("shiny", "shinydashboard", "plotly", "dplyr", "readr", 
-                   "tidyr", "tseries", "zoo", "forecast", "RcppRoll"))
-
-# Run the application
-shiny::runApp("Complete_project_DS_lab_1.R")
+### 1. Clone or download the repository
+```bash
+git clone https://github.com/Data-Science-Project-Group-19
+cd Stock-Market-Anomaly-Detection
 ```
 
-Live Application:
-
-Access the deployed application: https://mth208-project.shinyapps.io/proj/
-
----
-
-📈 Project Structure
-
+### 2. Install dependencies in R
+```R
+install.packages(c(
+  "shiny", "plotly", "tidyquant", "dplyr", "forecast", 
+  "ggplot2", "tseries", "DT", "shinythemes", "lubridate"
+))
 ```
-├── Complete_project_DS_lab_1.R     # Main Shiny application
-├── data/
-│   └── processed_stock_data.rds    # Pre-processed stock data
-├── docs/
-│   └── Ds_lab_1_report__final_.pdf # Comprehensive project report
-└── README.md
+
+### 3. Run the application
+```R
+library(shiny)
+runApp("app.R")
 ```
 
 ---
 
-🔬 Research Questions Addressed
-
-1. How can statistical methods systematically identify abnormal price movements and volume spikes?
-2. What are key statistical properties of historical returns for major NSE stocks?
-3. How can an interactive R Shiny dashboard implement real-time anomaly detection?
-4. What correlation structures exist between major Indian stocks?
-5. How effective are ARIMA models in providing short-term forecasts?
-6. How do anomaly patterns vary across different market sectors?
+## 🌐 Online Version
+Access the live deployed version here:  
+🔗 **[Live Shiny App](https://mth208-project.shinyapps.io/proj/)**
 
 ---
 
-👥 Contributors
+## 📊 Data Source
+- **Yahoo Finance API** via the R package `tidyquant`  
+- Time range: **January 2018 – Present**  
+- Tickers analyzed: Reliance, TCS, Infosys, HDFC Bank, ICICI Bank, SBI, HUL, ITC, Bharti Airtel, and L&T  
 
-Group 19 - IIT Kanpur
-
-· Manish Kumar Meena
-· Vritika 
-· Chandramohan Kushwah 
-· Sumit Sana 
-
-Course: MTH208 - Data Science Lab 1
-Institution: Indian Institute of Technology Kanpur
-Supervisor: Dr. Akash Anand 
-
+All data used is publicly available and collected under ethical research practices.
 
 ---
 
-📚 References
-
-1. Yahoo Finance API Documentation
-2. R tidyquant Package Documentation
-3. Shiny R Studio Documentation
-4. Tsay, R. S. (2005). Analysis of Financial Time Series
-5. Hyndman, R. J., & Athanasopoulos, G. (2018). Forecasting: Principles and Practice
+## 📁 Repository Contents
+| File / Folder | Description |
+|----------------|-------------|
+| `app.R` | Main Shiny app file (includes preprocessing + UI + server logic) |
+| `www/` | Contains all images, charts, and static assets used in the app |
+| `data/` | Stores preprocessed or cached data (optional) |
+| `Ds_lab_1_report_final.pdf` | Final written project report |
+| `README.md` | Documentation and execution instructions |
 
 ---
 
+## 👥 Team Members
+- **Manish Kumar Meena**  
+- **Vritika**  
+- **Chandramohan Kushwah**  
+- **Sumit Sana**
 
-© 2025 IIT Kanpur - Department of Mathematics & Statistics | MTH208 Data Science Lab 1
+---
+
+## 🧾 References
+1. Yahoo Finance (2024). Historical Market Data. [https://finance.yahoo.com/](https://finance.yahoo.com/)  
+2. R tidyquant, forecast, and Shiny Documentation.  
+3. Chandola, V., Banerjee, A., & Kumar, V. (2009). *Anomaly Detection: A Survey.* ACM Computing Surveys, 41(3), 1–58.  
+4. James, G., Witten, D., Hastie, T., & Tibshirani, R. (2013). *An Introduction to Statistical Learning.* Springer.
+
+---
+
+## 📜 License
+This project is developed solely for academic and educational use under the **IIT Kanpur Data Science Lab (MTH208)** course guidelines.
+
+---
