@@ -12,7 +12,24 @@ It integrates **Z-score analysis**, **volume spike detection**, **correlation an
 The system identifies unusual market behavior (price or volume deviations) and provides users with real-time visualization tools for exploratory analysis and forecasting.
 
 ---
+## App Design and Interactivity
 
+The project is implemented as an interactive R Shiny dashboard that allows real-time analysis and visualization.
+Users can select different stocks, change the date range, and view statistical outputs dynamically.
+The interface has multiple tabs:
+
+Dashboard: shows stock prices, volume, and detected anomalies with interactive charts.
+
+Statistical Tests: performs tests like ADF, KPSS, and Shapiro–Wilk to check normality and stationarity.
+
+Correlation Analysis: displays correlation heatmaps and scatter plots to study stock relationships.
+
+Forecasting: provides ARIMA-based short-term price forecasts with confidence intervals.
+
+About: gives details about project goals, data, and methods.
+
+The app combines preprocessing, analytics, and visualization in one integrated environment, making it easy to explore data and reproduce results.
+---
 ## 📂 Features
 - Real-time **anomaly detection** using Z-score and rolling volatility.  
 - **Interactive dashboard** for stock selection, date filtering, and visualization.  
