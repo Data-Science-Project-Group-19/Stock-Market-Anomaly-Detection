@@ -91,7 +91,7 @@ All data used is publicly available and collected under ethical research practic
 |----------------|-------------|
 | `preprocess.R`|preprocess anomaly test and merge them in a rds file|
 | `App.R` | Main Shiny app file (includes preprocessing + UI + server logic) |
-| `data/` | Stores preprocessed or cached data |
+| `data.zip` | Stores preprocessed and raw data |
 | `Project Report Group 19` | Final written project report |
 | `README.md` | Documentation and execution instructions |
 
